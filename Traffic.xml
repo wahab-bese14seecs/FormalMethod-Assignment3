@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?><!DOCTYPE nta PUBLIC '-//Uppaal Team//DTD Flat System 1.1//EN' 'http://www.it.uu.se/research/group/darts/uppaal/flat-1_1.dtd'><nta><declaration>// Place global declarations here.
+clock x;</declaration><template><name x="5" y="5">Traffic</name><declaration>// Place local declarations here.
+</declaration><location id="id0" x="64" y="-64"><name x="56" y="-96">Green</name></location><location id="id1" x="-64" y="-64"><name x="-74" y="-94">Yellow</name></location><location id="id2" x="-200" y="-64"><name x="-210" y="-94">Red</name></location><init ref="id2"/><transition><source ref="id0"/><target ref="id2"/><label kind="guard" x="-88" y="0">x&gt;=6</label><label kind="assignment" x="-88" y="24">x:=0</label><nail x="-24" y="24"/><nail x="-128" y="24"/></transition><transition><source ref="id1"/><target ref="id0"/><label kind="guard" x="-16" y="-88">x&gt;=1</label><label kind="assignment" x="-16" y="-64">x:=0</label></transition><transition><source ref="id2"/><target ref="id1"/><label kind="guard" x="-152" y="-88">x&gt;=4</label><label kind="assignment" x="-160" y="-64">x:=0</label></transition></template><system>// Place template instantiations here.
+Process = Traffic();
+
+// List one or more processes to be composed into a system.
+system Process;</system></nta>
